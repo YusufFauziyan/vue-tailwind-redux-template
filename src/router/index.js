@@ -18,7 +18,11 @@ const router = createRouter({
     },
     {
       path: "/chart",
-      component: () => import("../views/chart.vue"),
+      component: () => import("../views/Chart.vue"),
+    },
+    {
+      path: "/map",
+      component: () => import("../views/Map.vue"),
     },
   ],
 });

@@ -36,6 +36,11 @@ const routings = [
     path: "chart",
     icon: "bx:bxs-bar-chart-square",
   },
+  {
+    name: "Maps",
+    path: "map",
+    icon: "bx:bxs-map-pin",
+  },
 ];
 </script>
 
@@ -55,7 +60,9 @@ const routings = [
     <div v-for="(routing, index) in routings" :key="index" class="menu">
       <router-link :to="'/' + routing.path" class="button flex gap-4">
         <Icon class="w-7 h-7 icons" :icon="routing.icon" />
-        <span class="text">{{ routing.name }}</span>
+        <span class="text" :class="is_expanded ? '' : 'hidden'">{{
+          routing.name
+        }}</span>
       </router-link>
     </div>
 
